@@ -1,0 +1,41 @@
+{
+  "name": "footballkik",
+  "version": "1.0.0",
+  "description": "make app chat whith mongoose express and socket.io",
+  "main": "node server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "francis",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "async": "^3.1.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.1.2",
+    "cookie-parser": "^1.4.4",
+    "dependable": "^1.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
+    "express-session": "^1.17.0",
+    "express-validator": "5.3.1",
+    "formidable": "^1.2.1",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.9",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
