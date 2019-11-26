@@ -13,11 +13,13 @@ const lodash =require('lodash')
 
 
 
-const container=require('./container')
+const container=require('./container.js')
 
 mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost/footballkik');
-container.resolve(function(users,_){
+mongoose.connect('mongodb://localhost/footballkik',()=>{
+    console.log('mongo connected');
+});
+container.resolve(function(users, _){
     const app=SetupExpress();
 
     function SetupExpress(){
@@ -43,10 +45,16 @@ container.resolve(function(users,_){
         users.setRouting(router);
         app.use(router);
         app.use(validator()); 
+        
     }
 
     
     function configureExpress(app){
+        require('./passport/passport-local')
+        require('./passport/passport-facebook')
+
+
+
         app.use(express.static('public'));
         app.set('view engine','ejs');
      
@@ -66,7 +74,7 @@ container.resolve(function(users,_){
         app.use(passport.initialize());
         app.use(passport.session());
         
-        app.locals._=_;
+        app.locals._ = _;
 
     }
 });

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="bootstrap-3.3.6/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="bootstrap-3.3.6/js/jquery-3.1.1.min.js">
+    <link rel="stylesheet" href="bootstrap-3.3.6/dist/fonts/glyphicons-halflings-regular.eot">
+    <link rel="stylesheet" href="bootstrap-3.3.6/dist/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="bootstrap-3.3.6/dist/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="bootstrap-3.3.6/dist/fonts/glyphicons-halflings-regular.svg">
+
+
+
 
 
 
@@ -68,15 +75,22 @@
 <div id="main">
     <div class="main">
         <form action="/signup" method="post">
+            
+            <h1>
+                    <a href="#" class="btn-social btn-facebook">
+                        <i class="fa fa-facebook"></i>Sign Up With Facebook 
+                    </a>
+            </h1>
 
             <h1>
+              
                 Register
             </h1>
             <% if(hasErrors) { %>
             <div class="alert alert-danger text-center">
-                <a href="#" class="close" data-dismiss="alert"aria-label="close">&times;</a>
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <% _.forEach(messages,function(error){ %>
-                    <% error %> <br>
+                    <%= error %> <br>
                 <% })%>
             </div>
 
